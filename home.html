@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/home.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="whole-container">
+    <div class="side-bar">
+      <button class="hide">X</button>
+      <div class="user">
+        <img src="assets/images.png">
+        <p>Name Placeholder</p>
+      </div>
+      <div class="menu">
+        <button class="active" onclick="window.location.href='home.html'">
+          <span>Home</span>
+          <span class="active-arr">◀</span>
+        </button>
+        <button onclick="window.location.href='history.html'">History</button>
+        <button onclick="window.location.href='profile.html'">Profile</button>
+        <button onclick="window.location.href='about.html'">About</button>
+        <button onclick="window.location.href='help.html'">FAQ</button>
+      </div>
+    </div>
+
+    <div class="headings">
+      <h1>Gouter</h1>
+      <button class="menubut">☰</button>
+    </div>
+
+    <div class="row" id="main-content">
+      <div class="col-md-8">
+        <div class="card" id="graph">
+          <div class="card-body">
+            <canvas id="uricAcidChart"></canvas>
+          </div>
+        </div>
+
+        <div class="row g-3 mt-1">
+          <div class="col-md-6">
+              <div class="record-card">
+                  <span class="record-title">Highest uric acid level Recorded</span>
+                    <div class="info">
+                      <p>hi</p>
+                    </div>
+                </div>
+              </div>
+          
+
+          <div class="col-md-6">
+              <div class="record-card">
+                  <span class="record-title">Lowest uric acid Recorded</span>
+                    <div class="info">
+                      <p>hi</p>
+                    </div>
+                </div>
+              </div>
+
+            <div class="col-md-6">
+              <div class="record-card">
+                  <span class="record-title">Latest Uric Acid Level Recorded</span>
+                    <div class="info">
+                      <p>hi</p>
+                    </div>
+                </div>
+              </div>
+
+            <div class="col-md-6">
+              <div class="record-card">
+                  <span class="record-title">Average uric acid level </span>
+                    <div class="info">
+                      <p>hi</p>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card" id="forecast">
+          <div class="card-header" id="forecast-head">Forecast</div>
+          <div class="list-group list-group-flush" id="forecast-items">
+            <button class="list-group-item list-group-item-action text-bg-success" id="good">
+              <div class="card-body">
+                <h5 class="card-title">Good! Normal Uric Acid Level</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              </div>
+            </button>
+            <button class="list-group-item list-group-item-action text-bg-warning" id="fair">
+              <div class="card-body">
+                <h5 class="card-title">Attention! Uric Acid Level is Going Up!</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+              </div>
+            </button>
+            <button class="list-group-item list-group-item-action text-bg-danger" id="warning">
+              <div class="card-body">
+                <h5 class="card-title">Warning! High Uric Acid Level</h5>
+                <p class="card-text">Some quick example text to build on the card’s content.</p>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/sidebar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwxJXj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="js/chartconf.js"></script>
+  <!-- change to <script type="module" src="js/chartconf.js"></script> if actual database-->
+</body>
+</html>
