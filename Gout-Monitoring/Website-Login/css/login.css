@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background: #f5f2fb;
+
+    color: #29233d;
+
+    min-height: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+
+    height: 70px;
+
+    background: #241b4f;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 8%;
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    color: white;
+}
+
+
+.logo span {
+
+    color: #a8c83f;
+
+    font-size: 25px;
+}
+
+
+.back-home {
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+.back-home:hover {
+
+    color: #f3b83f;
+}
+
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.login-container {
+
+    min-height: calc(100vh - 70px);
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 30px;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================
+   WELCOME SECTION
+========================= */
+
+.welcome {
+
+    padding: 20px;
+}
+
+
+.small-title {
+
+    color: #6f6684;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+.welcome h1 {
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+    font-size: 48px;
+
+    line-height: 1.1;
+
+    color: #241b4f;
+
+    margin-bottom: 20px;
+}
+
+
+.welcome h1 span {
+
+    color: #5638a6;
+}
+
+
+.welcome-description {
+
+    color: #716b7e;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    max-width: 470px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 23px;
+}
+
+
+.feature-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    background: #e9e4fb;
+
+    color: #5638a6;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+
+    font-size: 19px;
+
+    flex-shrink: 0;
+}
+
+
+.feature h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+}
+
+
+.feature p {
+
+    font-size: 13px;
+
+    color: #777184;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   LOGIN CARD
+========================= */
+
+.login-card {
+
+    background: white;
+
+    padding: 40px;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 20px 60px rgba(45, 30, 80, 0.12);
+}
+
+
+.login-card h2 {
+
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+    font-size: 30px;
+
+    color: #241b4f;
+
+    margin-bottom: 8px;
+}
+
+
+.login-subtitle {
+
+    color: #777184;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+
+    color: #342e45;
+}
+
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 14px 15px;
+
+    border: 1.5px solid #dcd7e7;
+
+    border-radius: 11px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+.form-group input:focus {
+
+    border-color: #5638a6;
+
+    box-shadow:
+        0 0 0 3px rgba(86, 56, 166, 0.08);
+}
+
+
+/* =========================
+   REMEMBER / FORGOT
+========================= */
+
+.login-options {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 5px 0 22px;
+}
+
+
+.remember-me {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #777184;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+
+.remember-me input {
+
+    width: 15px;
+
+    height: 15px;
+}
+
+
+.login-options a {
+
+    color: #5638a6;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.login-options a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-submit {
+
+    width: 100%;
+
+    border: none;
+
+    background: #5638a6;
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 30px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.login-submit:hover {
+
+    background: #432b86;
+
+    transform: translateY(-1px);
+}
+
+
+.login-submit:disabled {
+
+    background: #aaa3bb;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#message {
+
+    text-align: center;
+
+    font-size: 13px;
+
+    margin-top: 12px;
+
+    line-height: 1.5;
+}
+
+
+.success {
+
+    color: #25803a;
+}
+
+
+.error {
+
+    color: #c62828;
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+.register-text {
+
+    text-align: center;
+
+    color: #777184;
+
+    font-size: 13px;
+
+    margin-top: 24px;
+}
+
+
+.register-text a {
+
+    color: #5638a6;
+
+    font-weight: 700;
+}
+
+
+.register-text a:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .login-container {
+
+        grid-template-columns: 1fr;
+
+        max-width: 600px;
+
+        gap: 20px;
+    }
+
+
+    .welcome {
+
+        text-align: center;
+    }
+
+
+    .welcome-description {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .feature {
+
+        text-align: left;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .navbar {
+
+        padding: 0 5%;
+    }
+
+
+    .login-container {
+
+        padding: 35px 18px;
+    }
+
+
+    .welcome h1 {
+
+        font-size: 38px;
+    }
+
+
+    .login-card {
+
+        padding: 28px 22px;
+    }
+
+
+    .login-card h2 {
+
+        font-size: 26px;
+    }
+
+}
