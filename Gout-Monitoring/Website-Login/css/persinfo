@@ -1,0 +1,275 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: #29233d;
+  background: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.whole-container {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.navbar {
+  height: 70px;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  background: #241b4f;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.logo-icon {
+  color: #a8c83f;
+  font-size: 25px;
+}
+
+.navbar nav {
+  display: flex;
+  padding-left: 10px;
+  gap: 60px;
+  flex: 1;
+}
+
+.navbar nav a {
+  font-size: 14px;
+  color: white;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.profile-btn {
+  background: white;
+  color: #241b4f;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.med-info {
+  margin-top: 25px;
+  padding: 0 5% 5% 5%;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page-title h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #24194f;
+}
+
+.page-title p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: #766b91;
+}
+
+.personal-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 20px;
+  align-items: end;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #eeeaf7;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 23px;
+  font-weight: 600;
+
+  color: #24194f;
+}
+
+.form-control,
+.form-select {
+  height: 48px;
+  border: 1px solid #dcd5eb;
+  border-radius: 12px;
+  color: #24194f;
+  font-size: 14px;
+  padding: 0 15px;
+  background: #ffffff;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #6240b8;
+  box-shadow: 0 0 0 3px rgba(98, 64, 184, 0.1);
+}
+
+.profile-picture {
+  text-align: center;
+  min-width: 110px;
+}
+
+.profile-circle {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: #eee8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5a3bb0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profile-picture label {
+  font-size: 11px;
+  color: #766b91;
+  line-height: 1.4;
+}
+
+.history-title {
+  text-align: center;
+  margin: 35px 0;
+}
+
+.history-title h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #24194f;
+}
+
+.history-title p {
+  margin: 0;
+  font-size: 13px;
+  color: #766b91;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+}
+
+.history-column {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.question {
+  padding: 22px;
+  background: #faf9fe;
+  border: 1px solid #eeeaf7;
+  border-radius: 18px;
+}
+
+.question-title {
+  margin-bottom: 15px;
+  font-size: 23px;
+  font-weight: 600;
+  color: #24194f;
+}
+
+.form-check {
+  margin-bottom: 9px;
+  padding-left: 28px;
+}
+
+.form-check-input {
+  width: 17px;
+  height: 17px;
+  margin-left: -28px;
+  border-color: #cfc6e2;
+}
+
+.form-check-input:checked {
+  background-color: #5a3bb0;
+  border-color: #5a3bb0;
+}
+
+.form-check-label {
+  font-size: 16px;
+  color: #625876;
+}
+
+#other {
+  margin-left: 7px;
+}
+
+textarea.form-control {
+  height: 195px;
+  padding: 14px;
+  resize: none;
+}
+
+.other-input {
+  width: 180px;
+  margin-left: 5px;
+  border: none;
+  border-bottom: 1px solid #cfc6e2;
+  background: transparent;
+  outline: none;
+  color: #24194f;
+  font-size: 16px;
+}
+
+.other-input:focus {
+  border-bottom-color: #5a3bb0;
+}
+
+.save-section {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.save-btn {
+  width: 260px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background: #5a3bb0;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.save-btn:hover {
+  background: #4b2e9d;
+  transform: translateY(-1px);
+}
