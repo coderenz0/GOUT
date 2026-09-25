@@ -1,0 +1,93 @@
+import{addDoc,collection,serverTimestamp}from"https://www.gstatic.com/firebasejs/12.17.0/firebase-firestore.js";
+import{db}from"./firebase-config.js";
+
+const saveButton=document.querySelector(".save-btn");
+
+saveButton.addEventListener("click",async()=>{
+
+const name=document.getElementById("name").value.trim();
+const sex=document.getElementById("sex").value;
+const age=document.getElementById("age").value;
+
+const diagnosedWith=[];
+
+if(document.getElementById("gout").checked){
+diagnosedWith.push("Gout");
+}
+
+if(document.getElementById("kidney").checked){
+diagnosedWith.push("Kidney Stones");
+}
+
+if(document.getElementById("otherDiagnosis").checked){
+const otherDiagnosis=document.querySelector("#otherDiagnosis + label + .other-input");
+
+if(otherDiagnosis&&otherDiagnosis.value.trim()!==""){
+diagnosedWith.push(otherDiagnosis.value.trim());
+}
+}
+
+const familyHistory=document.querySelector('input[name="familyHistory"]:checked');
+
+const consumption=[];
+
+if(document.getElementById("alcohol").checked){
+consumption.push("Alcohol");
+}
+
+if(document.getElementById("soda").checked){
+consumption.push("Soft drinks");
+}
+
+if(document.getElementById("otherConsumption").checked){
+const otherConsumption=document.querySelector("#otherConsumption + label + .other-input");
+
+if(otherConsumption&&otherConsumption.value.trim()!==""){
+consumption.push(otherConsumption.value.trim());
+}
+}
+
+const medicines=document.querySelectorAll("textarea")[0].value.trim();
+const illnesses=document.querySelectorAll("textarea")[1].value.trim();
+
+const medicalHistory={
+name:name,
+sex:sex,
+age:age,
+diagnosedWith:diagnosedWith,
+familyHistory:familyHistory?familyHistory.value:null,
+consumption:consumption,
+medicines:medicines,
+illnesses:illnesses,
+createdAt:serverTimestamp()
+};
+
+try{
+
+saveButton.disabled=true;
+saveButton.textContent="Saving...";
+
+const docRef=await addDoc(
+collection(db,"Patients_info"),
+medicalHistory
+);
+
+console.log("Medical history saved!");
+console.log("Document ID:",docRef.id);
+
+alert("Medical information saved successfully!");
+
+saveButton.textContent="Saved";
+
+}catch(error){
+
+console.error("Error saving medical history:",error);
+
+alert("Failed to save medical information.");
+
+saveButton.disabled=false;
+saveButton.textContent="Save Information";
+
+}
+
+});
