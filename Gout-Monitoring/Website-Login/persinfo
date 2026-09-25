@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical History</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/persinfo.css" />
+  </head>
+  <body>
+    <div class="whole-container">
+      <header class="navbar sticky-top">
+        <a href="#" class="logo">
+          <span class="logo-icon">✦</span>
+          Gouter
+        </a>
+      </header>
+      <div class="med-info">
+        <div class="page-title">
+          <h1>Medical Information</h1>
+          <p>Tell us a little about yourself to personalize your monitoring.</p>
+        </div>
+        <section class="personal-info">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Enter your name"
+            />
+          </div>
+          <div class="form-group">  
+            <label for="sex">Sex</label>
+            <select id="sex" class="form-select">
+              <option selected disabled>Select</option>
+              <option>Male</option>
+              <option>Female</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input
+              type="number"
+              id="age"
+              class="form-control"
+              placeholder="Age"
+            />
+          </div>
+          <div class="profile-picture">
+            <div class="profile-circle">+</div>
+            <label>Add profile picture<br />(Optional)</label>
+          </div>
+        </section>
+        <div class="history-title">
+          <h2>Medical History</h2>
+          <p>Answer honestly to help us provide better monitoring.</p>
+        </div>
+        <section class="history-grid">
+          <div class="history-column">
+            <div class="question">
+              <div class="question-title">Are you diagnosed with:</div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gout" />
+                <label class="form-check-label" for="gout">Gout</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="kidney" />
+                <label class="form-check-label" for="kidney"
+                  >Kidney Stones</label
+                >
+              </div>
+              <div class="form-check d-flex align-items-center">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="otherDiagnosis"
+                />
+                <label class="form-check-label" for="otherDiagnosis" id="other"
+                  >Others:</label
+                >
+                <input type="text" class="other-input" placeholder="Specify" />
+              </div>
+            </div>
+            <div class="question">
+              <div class="question-title">
+                Does your family have a history of gout or kidney stones?
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="familyHistory"
+                  id="familyYes"
+                />
+                <label class="form-check-label" for="familyYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="familyHistory"
+                  id="familyNo"
+                />
+                <label class="form-check-label" for="familyNo">No</label>
+              </div>
+            </div>
+            <div class="question">
+              <div class="question-title">
+                Do you consume any of the following:
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="alcohol" />
+                <label class="form-check-label" for="alcohol">Alcohol</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="soda" />
+                <label class="form-check-label" for="soda">Soft drinks</label>
+              </div>
+              <div class="form-check d-flex align-items-center">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="otherConsumption"
+                />
+                <label
+                  class="form-check-label"
+                  for="otherConsumption"
+                  id="other"
+                  >Others:</label
+                >
+                <input type="text" class="other-input" placeholder="Specify" />
+              </div>
+            </div>
+          </div>
+          <div class="history-column">
+            <div class="question">
+              <div class="question-title">
+                Any medicine that you're taking currently?
+              </div>
+              <textarea
+                class="form-control"
+                placeholder="Enter the medicines you currently take..."
+              ></textarea>
+            </div>
+            <div class="question">
+              <div class="question-title">Any specific existing illnesses?</div>
+              <textarea
+                class="form-control"
+                placeholder="Tell us about any existing illnesses..."
+              ></textarea>
+            </div>
+          </div>
+        </section>
+        <div class="save-section">
+          <button type="button" class="save-btn">Save Information</button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwxXj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="js/persinfo.js"></script>
+  </body>
+</html>
